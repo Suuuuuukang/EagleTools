@@ -77,7 +77,7 @@ public class ClientTaskCore implements Runnable{
             } else if (e.getMessage().contains("connected")) {
                 Thread.sleep(10000);
                 state = SocketState.Running;
-                //socket = new Socket();
+                socket = new Socket();
             }
         } catch (IOException e) {
             log.error("Socket连接错误:{}", e.getMessage());
